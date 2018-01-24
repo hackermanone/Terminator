@@ -15,6 +15,10 @@ if "%suffix%" == "s" goto seconds
 set /a seconds=%time%*3600
 shutdown -s -f -t %seconds%
 
+:minutes
+set /a seconds=%time%*60
+shutdown -s -f -t %seconds%
+
 :seconds
 shutdown -s -f -t %time%
 pause
