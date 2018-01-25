@@ -9,6 +9,7 @@ echo Type hours, minutes, or seconds (h, m, or s)?
 set /p suffix=
 :: check suffix
 if "%suffix%" == "h" goto hours
+if "%suffix%" == "m" goto minutes
 if "%suffix%" == "s" goto seconds
 
 :hours
@@ -21,4 +22,3 @@ shutdown -s -f -t %seconds%
 
 :seconds
 shutdown -s -f -t %time%
-pause
